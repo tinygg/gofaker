@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	gofakeit "github.com/tinygg/faker/v0"
+	gofakeit "github.com/tinygg/faker"
 	"os"
 	"sort"
 	"strings"

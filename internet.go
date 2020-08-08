@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tinygg/faker/v0/data"
+	"github.com/tinygg/faker/data"
 )
 
 // DomainName will generate a random url domain name

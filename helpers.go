@@ -1,7 +1,7 @@
 package gofakeit
 
 import (
-	"github.com/tinygg/faker/v0/data"
+	"github.com/tinygg/faker/data"
 	"math"
 	"math/rand"
 	"strings"

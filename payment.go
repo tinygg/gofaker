@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinygg/faker/v0/data"
+	"github.com/tinygg/faker/data"
 )
 
 // CurrencyInfo is a struct of currency information

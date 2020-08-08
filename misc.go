@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"math/rand"
 
-	"github.com/tinygg/faker/v0/data"
+	"github.com/tinygg/faker/data"
 )
 
 // Bool will generate a random boolean value

@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/tinygg/faker/v0/data"
+	"github.com/tinygg/faker/data"
 )
 
 func ExampleBool() {

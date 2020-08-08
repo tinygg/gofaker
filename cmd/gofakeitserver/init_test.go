@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	gofakeit "github.com/tinygg/faker/v0"
+	gofakeit "github.com/tinygg/faker"
 )
 
 var ts *httptest.Server

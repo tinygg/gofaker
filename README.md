@@ -17,12 +17,12 @@ Random data generator written in go
 
 ## Installation
 ```go
-go get github.com/tinygg/faker/v0
+go get github.com/tinygg/faker
 ```
 
 ## Example
 ```go
-import "github.com/tinygg/faker/v0"
+import "github.com/tinygg/faker"
 
 gofakeit.Seed(0)
 
@@ -42,7 +42,7 @@ gofakeit.CurrencyShort()    // USD
 
 ## Example Struct
 ```go
-import "github.com/tinygg/faker/v0"
+import "github.com/tinygg/faker"
 
 // Create structs with random injected data
 type Foo struct {

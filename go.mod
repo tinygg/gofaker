@@ -1,3 +1,3 @@
-module github.com/tinygg/faker/v0
+module github.com/tinygg/faker
 
 go 1.14

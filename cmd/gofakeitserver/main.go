@@ -6,7 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	gofakeit "github.com/tinygg/faker/v0"
+	gofakeit "github.com/tinygg/faker"
 	"net/http"
 	"reflect"
 	"strings"
