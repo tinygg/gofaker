@@ -46,7 +46,7 @@ func TestCategories(t *testing.T) {
 	for k := range Categories() {
 		got = append(got, k)
 	}
-	for k := range data.Data {
+	for k := range data.Data() {
 		expected = append(expected, k)
 	}
 	sort.Strings(got)

@@ -18,10 +18,10 @@ type CurrencyInfo struct {
 
 // Currency will generate a struct with random currency information
 func Currency() *CurrencyInfo {
-	index := rand.Intn(len(data.Data["currency"]["short"]))
+	index := rand.Intn(len(data.Data()["currency"]["short"]))
 	return &CurrencyInfo{
-		Short: data.Data["currency"]["short"][index],
-		Long:  data.Data["currency"]["long"][index],
+		Short: data.Data()["currency"]["short"][index],
+		Long:  data.Data()["currency"]["long"][index],
 	}
 }
 

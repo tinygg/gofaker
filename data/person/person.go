@@ -7,9 +7,9 @@ import (
 
 func Provider(lang string) map[string][]string {
 	switch lang {
-	case "ZH_CN":
+	case "zh_CN":
 		return zh_CN.Person
-	case "EN_US":
+	case "en_US":
 		return en_US.Person
 	default:
 		return en_US.Person

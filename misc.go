@@ -43,7 +43,7 @@ func UUID() string {
 // Categories will return a map string array of available data categories and sub categories
 func Categories() map[string][]string {
 	types := make(map[string][]string)
-	for category, subCategoriesMap := range data.Data {
+	for category, subCategoriesMap := range data.Data() {
 		subCategories := make([]string, 0)
 		for subType := range subCategoriesMap {
 			subCategories = append(subCategories, subType)

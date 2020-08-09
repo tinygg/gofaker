@@ -21,9 +21,9 @@ func dataCheck(dataVal []string) bool {
 	var checkOk bool
 
 	if len(dataVal) == 2 {
-		_, checkOk = data.Data[dataVal[0]]
+		_, checkOk = data.Data()[dataVal[0]]
 		if checkOk {
-			_, checkOk = data.Data[dataVal[0]][dataVal[1]]
+			_, checkOk = data.Data()[dataVal[0]][dataVal[1]]
 		}
 	}
 
@@ -49,7 +49,7 @@ func getRandValue(dataVal []string) string {
 	if !dataCheck(dataVal) {
 		return ""
 	}
-	return data.Data[dataVal[0]][dataVal[1]][rand.Intn(len(data.Data[dataVal[0]][dataVal[1]]))]
+	return data.Data()[dataVal[0]][dataVal[1]][rand.Intn(len(data.Data()[dataVal[0]][dataVal[1]]))]
 }
 
 // Get Random Integer Value
