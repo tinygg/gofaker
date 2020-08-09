@@ -41,7 +41,7 @@ func Address() *AddressInfo {
 func Street() (street string) {
 	switch randInt := randIntRange(1, 2); randInt {
 	case 1:
-		street = StreetPrefix() + " " + StreetName() + StreetSuffix() + StreetNumber() + "号"
+		street = StreetName() + StreetPrefix() + StreetSuffix() + StreetNumber() + "号"
 	case 2:
 		street = StreetName() + StreetSuffix() + StreetNumber() + "号"
 	}

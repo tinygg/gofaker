@@ -2,7 +2,7 @@ package zh_CN
 
 // Address consists of address information
 var Address = map[string][]string{
-	"number":        {"#####", "####", "###"},
+	"number":        {"####", "###", "##"},
 	"street_prefix": {"北", "东", "西", "南", "新"},
 	"street_name": {
 		"西夏", "永川", "秀英", "高港", "清城", "兴山", "锡山", "清河",
