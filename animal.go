@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 // PetName will return a random fun pet name
 func PetName() string {

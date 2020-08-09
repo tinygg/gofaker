@@ -1,4 +1,4 @@
 /*
-package gofaker provides a set of functions that generate random data
+package gofakerr provides a set of functions that generate random data
 */
-package gofake
+package gofaker

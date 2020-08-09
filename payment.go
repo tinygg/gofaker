@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 import (
 	"math"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinygg/faker/data"
+	"github.com/tinygg/gofaker/data"
 )
 
 // CurrencyInfo is a struct of currency information

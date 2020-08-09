@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 // CarInfo is a struct dataset of all car information
 type CarInfo struct {

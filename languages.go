@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 // Language will return a random language
 func Language() string {

@@ -4,12 +4,12 @@ All functions are available to run in lowercase as first path and if they take i
 
 ### Installation
 ```go
-go get github.com/tinygg/faker
+go get github.com/tinygg/gofaker
 ```
 
 ### Example
 ```bash
-gofakeitserver // default port is 8080
+gofakerserver // default port is 8080
 ```
 
-![](https://raw.githubusercontent.com/tinygg/faker/master/cmd/server/server.gif)
+![](https://raw.githubusercontent.com/tinygg/faker/master/cmd/gofakerserver/server.gif)

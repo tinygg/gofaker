@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/tinygg/faker/data"
+	"github.com/tinygg/gofaker/data"
 )
 
 func ExampleBool() {

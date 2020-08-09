@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 // FileExtension will generate a random file extension
 func FileExtension() string {

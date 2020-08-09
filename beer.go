@@ -1,4 +1,4 @@
-package gofake
+package gofaker
 
 import "strconv"
 

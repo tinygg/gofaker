@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	gofaker "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/gofaker"
 	"net/url"
 	"strings"
 	"testing"

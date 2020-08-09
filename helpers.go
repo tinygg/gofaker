@@ -1,7 +1,7 @@
-package gofake
+package gofaker
 
 import (
-	"github.com/tinygg/faker/data"
+	"github.com/tinygg/gofaker/data"
 	"math"
 	"math/rand"
 	"strings"

@@ -6,7 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	gofaker "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/gofaker"
 	"net/http"
 	"reflect"
 	"strings"
@@ -15,7 +15,7 @@ import (
 var port string
 
 func init() {
-	flag.StringVar(&port, "port", "8080", "server port")
+	flag.StringVar(&port, "port", "8080", "gofakerserver port")
 }
 
 func main() {

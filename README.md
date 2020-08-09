@@ -1,6 +1,6 @@
-![alt text](https://raw.githubusercontent.com/brianvoe/gofakeit/master/logo.png)
+![alt text](https://raw.githubusercontent.com/tinygg/gofaker/master/logo.png)
 
-# Gofakeit [![Go Report Card](https://goreportcard.com/badge/github.com/brianvoe/gofakeit)](https://goreportcard.com/report/github.com/brianvoe/gofakeit) ![Go](https://github.com/brianvoe/gofakeit/workflows/Go/badge.svg) [![codecov.io](https://codecov.io/github/brianvoe/gofakeit/branch/master/graph/badge.svg)](https://codecov.io/github/brianvoe/gofakeit) [![GoDoc](https://godoc.org/github.com/brianvoe/gofakeit?status.svg)](https://godoc.org/github.com/brianvoe/gofakeit) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/brianvoe/gofakeit/master/LICENSE.txt)
+# gofaker [![Go Report Card](https://goreportcard.com/badge/github.com/tinygg/gofaker)](https://goreportcard.com/report/github.com/tinygg/gofaker) ![Go](https://github.com/tinygg/gofaker/workflows/Go/badge.svg) [![codecov.io](https://codecov.io/github/tinygg/gofaker/branch/master/graph/badge.svg)](https://codecov.io/github/tinygg/gofaker) [![GoDoc](https://godoc.org/github.com/tinygg/gofaker?status.svg)](https://godoc.org/github.com/tinygg/gofaker) [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/tinygg/gofaker/master/LICENSE.txt)
 Random data generator written in go
 
 <a href="https://www.buymeacoffee.com/brianvoe" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
@@ -9,40 +9,40 @@ Random data generator written in go
 - [160+ Functions!!!](#functions)
 - [Struct Generator](#example-struct)
 - [Custom Functions](#example-custom-functions)
-- [Http Server](https://github.com/brianvoe/gofakeit/tree/master/cmd/gofakeitserver)
-- [Command Line Tool](https://github.com/brianvoe/gofakeit/tree/master/cmd/gofakeit)
+- [Http Server](https://github.com/tinygg/gofaker/tree/master/cmd/gofakerserver)
+- [Command Line Tool](https://github.com/tinygg/gofaker/tree/master/cmd/gofaker)
 - Zero dependencies
-- [Benchmarks](https://github.com/brianvoe/gofakeit/blob/master/BENCHMARKS.md)
-- [Issue](https://github.com/brianvoe/gofakeit/issues)
+- [Benchmarks](https://github.com/tinygg/gofaker/blob/master/BENCHMARKS.md)
+- [Issue](https://github.com/tinygg/gofaker/issues)
 
 ## Installation
 ```go
-go get github.com/tinygg/faker
+go get github.com/tinygg/gofaker
 ```
 
 ## Example
 ```go
-import "github.com/tinygg/faker"
+import "github.com/tinygg/gofaker"
 
-gofakeit.Seed(0)
+gofaker.Seed(0)
 
-gofakeit.Name()             // Markus Moen
-gofakeit.Email()            // alaynawuckert@kozey.biz
-gofakeit.Phone()            // (570)245-7485
-gofakeit.BS()               // front-end
-gofakeit.BeerName()         // Duvel
-gofakeit.Color()            // MediumOrchid
-gofakeit.Company()          // Moen, Pagac and Wuckert
-gofakeit.CreditCardNumber() // 4287271570245748
-gofakeit.HackerPhrase()     // Connecting the array won't do anything, we need to generate the haptic COM driver!
-gofakeit.JobTitle()         // Director
-gofakeit.CurrencyShort()    // USD
+gofaker.Name()             // Markus Moen
+gofaker.Email()            // alaynawuckert@kozey.biz
+gofaker.Phone()            // (570)245-7485
+gofaker.BS()               // front-end
+gofaker.BeerName()         // Duvel
+gofaker.Color()            // MediumOrchid
+gofaker.Company()          // Moen, Pagac and Wuckert
+gofaker.CreditCardNumber() // 4287271570245748
+gofaker.HackerPhrase()     // Connecting the array won't do anything, we need to generate the haptic COM driver!
+gofaker.JobTitle()         // Director
+gofaker.CurrencyShort()    // USD
 // See full list below
 ```
 
 ## Example Struct
 ```go
-import "github.com/tinygg/faker"
+import "github.com/tinygg/gofaker"
 
 // Create structs with random injected data
 type Foo struct {
@@ -64,7 +64,7 @@ type FooBar struct {
 
 // Pass your struct as a pointer
 var f Foo
-gofakeit.Struct(&f)
+gofaker.Struct(&f)
 fmt.Println(f.Bar)      // hrukpttuezptneuvunh
 fmt.Println(f.Int)      // -7825289004089916589
 fmt.Println(*f.Pointer) // -343806609094473732
@@ -75,7 +75,7 @@ fmt.Println(f.Number)   // 4
 fmt.Println(f.Skip)     // <nil>
 
 var fb FooBar
-gofakeit.Struct(&fb)
+gofaker.Struct(&fb)
 fmt.Println(fb.Bars)      // [Charlie Senger]
 fmt.Println(fb.Foos)      // [{blmfxy -2585154718894894116 0xc000317bc0 Emmy Attitude demand addition. hello 3 <nil>} {cplbf -1722374676852125164 0xc000317cb0 Viva Addition option link. hello 7 <nil>}]
 

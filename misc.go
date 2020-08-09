@@ -1,10 +1,10 @@
-package gofake
+package gofaker
 
 import (
 	"encoding/hex"
 	"math/rand"
 
-	"github.com/tinygg/faker/data"
+	"github.com/tinygg/gofaker/data"
 )
 
 // Bool will generate a random boolean value

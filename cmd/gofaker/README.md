@@ -4,7 +4,7 @@ All functions are available to run in lowercase and if they require additional p
 
 ### Installation
 ```go
-go get github.com/tinygg/faker
+go get github.com/tinygg/gofaker
 ```
 
 ### Example
