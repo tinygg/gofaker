@@ -1,8 +1,13 @@
 package data
 
+import (
+	"github.com/tinygg/gofaker/data/person"
+	"reflect"
+)
+
 // Data consists of the main set of fake information
 var Data = map[string]map[string][]string{
-	"person":    Person,
+	"person":    person.Provider(reflect.ValueOf(LOCALE).String()),
 	"address":   Address,
 	"company":   Company,
 	"job":       Job,
