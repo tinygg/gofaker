@@ -1,5 +1,5 @@
-# Gofakeit Server
-Run gofakeit via a running server. 
+# Gofaker Server
+Run gofaker via a running server. 
 All functions are available to run in lowercase as first path and if they take in additional parameters you may pass by query parameters.
 
 ### Installation
@@ -12,4 +12,4 @@ go get github.com/tinygg/faker
 gofakeitserver // default port is 8080
 ```
 
-![](https://raw.githubusercontent.com/brianvoe/gofakeit/master/cmd/gofakeitserver/server.gif)
+![](https://raw.githubusercontent.com/tinygg/faker/master/cmd/server/server.gif)

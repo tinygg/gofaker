@@ -1,4 +1,4 @@
-package gofakeit
+package gofake
 
 // Emoji will return a random fun emoji
 func Emoji() string {

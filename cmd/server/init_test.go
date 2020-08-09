@@ -12,14 +12,14 @@ import (
 	"strings"
 	"testing"
 
-	gofakeit "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/faker"
 )
 
 var ts *httptest.Server
 
 func init() {
 	// Set random seed for app
-	gofakeit.Seed(0)
+	gofaker.Seed(0)
 
 	// Set up test server
 	mux := http.NewServeMux()

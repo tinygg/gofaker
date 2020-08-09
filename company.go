@@ -1,4 +1,4 @@
-package gofakeit
+package gofake
 
 // Company will generate a random company name string
 func Company() (company string) {

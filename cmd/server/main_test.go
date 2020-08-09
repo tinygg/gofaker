@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	gofakeit "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/faker"
 	"net/url"
 	"strings"
 	"testing"
 )
 
 func TestList(t *testing.T) {
-	var response map[string]gofakeit.Info
+	var response map[string]gofaker.Info
 	var statusCode int
 	testRequest(&testRequestStruct{
 		Testing:    t,
@@ -29,7 +29,7 @@ func TestList(t *testing.T) {
 }
 
 func TestGetAllRequests(t *testing.T) {
-	for field, info := range gofakeit.FuncLookups {
+	for field, info := range gofaker.FuncLookups {
 		mapData := url.Values{}
 		if info.Params != nil && len(info.Params) != 0 {
 			// Loop through params and add fields to mapdata
@@ -41,29 +41,29 @@ func TestGetAllRequests(t *testing.T) {
 
 				switch p.Type {
 				case "bool":
-					mapData.Add(p.Field, fmt.Sprintf("%v", gofakeit.Bool()))
+					mapData.Add(p.Field, fmt.Sprintf("%v", gofaker.Bool()))
 					break
 				case "string":
-					mapData.Add(p.Field, gofakeit.Letter())
+					mapData.Add(p.Field, gofaker.Letter())
 					break
 				case "uint":
-					mapData.Add(p.Field, fmt.Sprintf("%v", gofakeit.Uint16()))
+					mapData.Add(p.Field, fmt.Sprintf("%v", gofaker.Uint16()))
 				case "int":
-					mapData.Add(p.Field, fmt.Sprintf("%v", gofakeit.Int16()))
+					mapData.Add(p.Field, fmt.Sprintf("%v", gofaker.Int16()))
 				case "float":
-					mapData.Add(p.Field, fmt.Sprintf("%v", gofakeit.Float32()))
+					mapData.Add(p.Field, fmt.Sprintf("%v", gofaker.Float32()))
 					break
 				case "[]string":
-					mapData.Add(p.Field, gofakeit.Letter())
-					mapData.Add(p.Field, gofakeit.Letter())
-					mapData.Add(p.Field, gofakeit.Letter())
-					mapData.Add(p.Field, gofakeit.Letter())
+					mapData.Add(p.Field, gofaker.Letter())
+					mapData.Add(p.Field, gofaker.Letter())
+					mapData.Add(p.Field, gofaker.Letter())
+					mapData.Add(p.Field, gofaker.Letter())
 					break
 				case "[]int":
-					mapData.Add(p.Field, fmt.Sprintf("%d", gofakeit.Int8()))
-					mapData.Add(p.Field, fmt.Sprintf("%d", gofakeit.Int8()))
-					mapData.Add(p.Field, fmt.Sprintf("%d", gofakeit.Int8()))
-					mapData.Add(p.Field, fmt.Sprintf("%d", gofakeit.Int8()))
+					mapData.Add(p.Field, fmt.Sprintf("%d", gofaker.Int8()))
+					mapData.Add(p.Field, fmt.Sprintf("%d", gofaker.Int8()))
+					mapData.Add(p.Field, fmt.Sprintf("%d", gofaker.Int8()))
+					mapData.Add(p.Field, fmt.Sprintf("%d", gofaker.Int8()))
 					break
 				case "[]Field":
 					mapData.Add(p.Field, `{"name":"first_name","function":"firstname"}`)
@@ -137,7 +137,7 @@ func TestGetLookupWithParams(t *testing.T) {
 }
 
 func TestPostAllRequests(t *testing.T) {
-	for field, info := range gofakeit.FuncLookups {
+	for field, info := range gofaker.FuncLookups {
 		var mapData map[string][]string
 		if info.Params != nil && len(info.Params) != 0 {
 			// Make sure mapdata is set
@@ -154,23 +154,23 @@ func TestPostAllRequests(t *testing.T) {
 
 				switch p.Type {
 				case "bool":
-					mapData[p.Field] = []string{fmt.Sprintf("%v", gofakeit.Bool())}
+					mapData[p.Field] = []string{fmt.Sprintf("%v", gofaker.Bool())}
 					break
 				case "string":
-					mapData[p.Field] = []string{gofakeit.Letter()}
+					mapData[p.Field] = []string{gofaker.Letter()}
 					break
 				case "uint":
-					mapData[p.Field] = []string{fmt.Sprintf("%v", gofakeit.Uint16())}
+					mapData[p.Field] = []string{fmt.Sprintf("%v", gofaker.Uint16())}
 				case "int":
-					mapData[p.Field] = []string{fmt.Sprintf("%v", gofakeit.Int16())}
+					mapData[p.Field] = []string{fmt.Sprintf("%v", gofaker.Int16())}
 				case "float":
-					mapData[p.Field] = []string{fmt.Sprintf("%v", gofakeit.Float32())}
+					mapData[p.Field] = []string{fmt.Sprintf("%v", gofaker.Float32())}
 					break
 				case "[]string":
-					mapData[p.Field] = []string{gofakeit.Letter(), gofakeit.Letter(), gofakeit.Letter(), gofakeit.Letter()}
+					mapData[p.Field] = []string{gofaker.Letter(), gofaker.Letter(), gofaker.Letter(), gofaker.Letter()}
 					break
 				case "[]int":
-					mapData[p.Field] = []string{fmt.Sprintf("%d", gofakeit.Int8()), fmt.Sprintf("%d", gofakeit.Int8()), fmt.Sprintf("%d", gofakeit.Int8()), fmt.Sprintf("%d", gofakeit.Int8())}
+					mapData[p.Field] = []string{fmt.Sprintf("%d", gofaker.Int8()), fmt.Sprintf("%d", gofaker.Int8()), fmt.Sprintf("%d", gofaker.Int8()), fmt.Sprintf("%d", gofaker.Int8())}
 					break
 				case "[]Field":
 					mapData[p.Field] = []string{`{"name":"first_name","function":"firstname"}`}

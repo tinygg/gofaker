@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	gofakeit "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/faker"
 	"os"
 	"sort"
 	"strings"
 )
 
-var noFuncRunMsg = "Could not find function to run\nRun gofakeit help or gofakeit list for available functions"
+var noFuncRunMsg = "Could not find function to run\nRun gofaker help or gofaker list for available functions"
 
 func main() {
-	gofakeit.Seed(0)
+	gofaker.Seed(0)
 
 	args := os.Args[1:]
 	argsLen := len(args)
@@ -28,14 +28,14 @@ func main() {
 	// If function is help, give some information
 	if function == "help" {
 		fmt.Println("NAME")
-		fmt.Println("    gofakeit -- command line random data generator")
+		fmt.Println("    gofaker -- command line random data generator")
 		fmt.Println()
 		fmt.Println("SYNOPSIS")
-		fmt.Println("    gofakeit list")
-		fmt.Println("    gofakeit [function] [parameters...]")
+		fmt.Println("    gofaker list")
+		fmt.Println("    gofaker [function] [parameters...]")
 		fmt.Println()
 		fmt.Println("DESCRIPTION")
-		fmt.Println("    gofakeit is a set of functions that allow you to generate random data.")
+		fmt.Println("    gofaker is a set of functions that allow you to generate random data.")
 		return
 	}
 
@@ -50,7 +50,7 @@ func main() {
 	}
 
 	// Lookup fake data method
-	info := gofakeit.GetFuncLookup(function)
+	info := gofaker.GetFuncLookup(function)
 	if info == nil {
 		fmt.Println(noFuncRunMsg)
 		return
@@ -103,7 +103,7 @@ func listOutput(selectedCategory string) {
 
 	// Get list of categories
 	categories := []string{}
-	for _, l := range gofakeit.FuncLookups {
+	for _, l := range gofaker.FuncLookups {
 		// If selected category is set only grab of that category
 		if selectedCategory != "" && selectedCategory != l.Category {
 			continue
@@ -123,7 +123,7 @@ func listOutput(selectedCategory string) {
 		funcNames := []string{}
 
 		// Get all in category
-		for fName, l := range gofakeit.FuncLookups {
+		for fName, l := range gofaker.FuncLookups {
 			if categories[i] == l.Category && !stringInSlice(fName, funcNames) {
 				funcNames = append(funcNames, fName)
 			}
@@ -134,7 +134,7 @@ func listOutput(selectedCategory string) {
 
 		// Output func info
 		for _, fName := range funcNames {
-			info := gofakeit.GetFuncLookup(fName)
+			info := gofaker.GetFuncLookup(fName)
 			fmt.Println("    " + fName + " - " + info.Description)
 			for _, p := range info.Params {
 				fmt.Println("        Field Name: " + p.Field + " Type: " + p.Type + " Default: " + p.Default + " - " + p.Description)

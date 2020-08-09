@@ -1,4 +1,4 @@
-package gofakeit
+package gofake
 
 import (
 	"log"

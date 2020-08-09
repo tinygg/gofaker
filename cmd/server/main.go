@@ -6,7 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	gofakeit "github.com/tinygg/faker"
+	gofaker "github.com/tinygg/faker"
 	"net/http"
 	"reflect"
 	"strings"
@@ -21,7 +21,7 @@ func init() {
 func main() {
 	flag.Parse()
 
-	gofakeit.Seed(0)
+	gofaker.Seed(0)
 
 	// Set router
 	mux := http.NewServeMux()
@@ -41,11 +41,11 @@ func routes(mux *http.ServeMux) {
 func favicon(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "image/x-icon")
 	w.WriteHeader(http.StatusOK)
-	w.Write(gofakeit.ImagePng(32, 32))
+	w.Write(gofaker.ImagePng(32, 32))
 }
 
 func list(w http.ResponseWriter, r *http.Request) {
-	ok(w, gofakeit.FuncLookups)
+	ok(w, gofaker.FuncLookups)
 }
 
 func lookup(w http.ResponseWriter, r *http.Request) {
@@ -153,7 +153,7 @@ func lookupPost(w http.ResponseWriter, r *http.Request) {
 	ok(w, data)
 }
 
-func getInfoFromPath(r *http.Request) (*gofakeit.Info, error) {
+func getInfoFromPath(r *http.Request) (*gofaker.Info, error) {
 	path := r.URL.Path
 	path = strings.Trim(path, "/")
 	paths := strings.Split(path, "/")
@@ -162,7 +162,7 @@ func getInfoFromPath(r *http.Request) (*gofakeit.Info, error) {
 	}
 
 	// Lookup fake data method
-	info := gofakeit.GetFuncLookup(paths[0])
+	info := gofaker.GetFuncLookup(paths[0])
 	if info == nil {
 		return nil, errors.New("No function was called, please pass func parameter")
 	}
