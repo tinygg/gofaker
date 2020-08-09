@@ -1,4 +1,4 @@
-package data
+package en_US
 
 // Company consists of company information
 var Company = map[string][]string{

@@ -26,7 +26,7 @@ func Address() *AddressInfo {
 	zip := Zip()
 
 	return &AddressInfo{
-		Address:   street + ", " + city + ", " + state + " " + zip,
+		Address:   state + " " + city + " " + street + " ",
 		Street:    street,
 		City:      city,
 		State:     state,

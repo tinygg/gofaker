@@ -1,6 +1,8 @@
 package data
 
 import (
+	"github.com/tinygg/gofaker/data/address"
+	"github.com/tinygg/gofaker/data/company"
 	"github.com/tinygg/gofaker/data/person"
 	"reflect"
 )
@@ -9,8 +11,8 @@ import (
 func Data() map[string]map[string][]string {
 	return map[string]map[string][]string{
 		"person":    person.Provider(reflect.ValueOf(LOCALE).String()),
-		"address":   Address,
-		"company":   Company,
+		"address":   address.Provider(reflect.ValueOf(LOCALE).String()),
+		"company":   company.Provider(reflect.ValueOf(LOCALE).String()),
 		"job":       Job,
 		"lorem":     Lorem,
 		"language":  Languages,

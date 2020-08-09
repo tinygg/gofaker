@@ -1,4 +1,4 @@
-package data
+package en_US
 
 // Address consists of address information
 var Address = map[string][]string{
