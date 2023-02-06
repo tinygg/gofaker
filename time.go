@@ -198,6 +198,17 @@ func addDateTimeLookup() {
 		},
 	})
 
+	AddFuncLookup("month", Info{
+		Display:     "Month",
+		Category:    "time",
+		Description: "Random month",
+		Example:     "1",
+		Output:      "int",
+		Call: func(m *map[string][]string, info *Info) (interface{}, error) {
+			return Month(), nil
+		},
+	})
+
 	AddFuncLookup("year", Info{
 		Display:     "Year",
 		Category:    "time",
